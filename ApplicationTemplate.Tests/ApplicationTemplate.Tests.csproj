@@ -56,7 +56,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="SailboatDtoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +67,14 @@
     <ProjectReference Include="..\ApplicationTemplate\ApplicationTemplate.csproj">
       <Project>{2759C0D1-D896-4580-B685-9396EC684362}</Project>
       <Name>ApplicationTemplate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessTier\BusinessTier.csproj">
+      <Project>{f7fb4757-44eb-42fa-85f3-c7a7db430e68}</Project>
+      <Name>BusinessTier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2bc938f4-e0c0-42ff-9032-a4e931dedbea}</Project>
+      <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

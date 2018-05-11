@@ -18,7 +18,7 @@ namespace ApplicationTemplate.App_Start
                 x.AddProfile<SailboatProfile>();
             });
 
-            Mapper.Configuration.AssertConfigurationIsValid();
+            //Mapper.Configuration.AssertConfigurationIsValid();
         }
     }
 }
