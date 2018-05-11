@@ -28,6 +28,7 @@ namespace ApplicationTemplate.Controllers
             {
                 var model = new SailboatModel
                 {
+                    SailboatId = sailboat.SailboatId,
                     Name = sailboat.Name,
                     Type = sailboat.Type,
                     WaterLineLengthInFeet = sailboat.WaterLineLengthInFeet,

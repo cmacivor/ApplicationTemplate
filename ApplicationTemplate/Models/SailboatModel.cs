@@ -9,6 +9,8 @@ namespace ApplicationTemplate.Models
 {
     public class SailboatModel
     {
+        public int SailboatId { get; set; }
+
         [Required]
         public string Name { get; set; }
 
