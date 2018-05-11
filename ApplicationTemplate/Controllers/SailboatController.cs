@@ -21,7 +21,23 @@ namespace ApplicationTemplate.Controllers
         // GET: Sailboat
         public ActionResult Index()
         {
-            return View();
+            var allSailboats = _repository.GetSailboats();
+
+            var sailboatViewModels = new List<SailboatModel>();
+            foreach (var sailboat in allSailboats)
+            {
+                var model = new SailboatModel
+                {
+                    Name = sailboat.Name,
+                    Type = sailboat.Type,
+                    WaterLineLengthInFeet = sailboat.WaterLineLengthInFeet,
+                    MaxHullSpeed = sailboat.MaxHullSpeed
+                };
+
+                sailboatViewModels.Add(model);
+            }
+
+            return View(sailboatViewModels);
         }
 
         public ActionResult Add()
@@ -37,16 +53,6 @@ namespace ApplicationTemplate.Controllers
         {
             var sailboatDto = Mapper.Map<BusinessTier.SailboatDto>(sailboatModel);
             sailboatDto.CalculateMaxHullSpeed();
-
-            //var dbObject = new DataTier.EF.Models.Sailboat
-            //{
-            //    Name = sailboatDto.Name,
-            //    Type = sailboatDto.Type,
-            //    MaxHullSpeed = Convert.ToDecimal(sailboatDto.MaxHullSpeed),
-            //    WaterLineLengthInFeet = Convert.ToDecimal(sailboatDto.WaterLineLengthInFeet)
-            //};
-
-            //_repository.Save(dbObject);
 
             _repository.Save(sailboatDto);
 

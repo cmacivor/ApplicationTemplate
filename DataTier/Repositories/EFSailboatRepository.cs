@@ -12,7 +12,12 @@ namespace DataTier.Repositories
     {
         public List<Sailboat> GetSailboats()
         {
-            throw new NotImplementedException();
+            using (var context = new SailboatDbContext())
+            {
+                var allSailboats = context.Sailboats.ToList();
+
+                return allSailboats;
+            }
         }
 
         public void Save(Common.ISailboat sailboatDto)

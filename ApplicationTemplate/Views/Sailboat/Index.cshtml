@@ -1,4 +1,12 @@
-﻿
+﻿@using ApplicationTemplate.Models
+@model IEnumerable<SailboatModel>
+@section Scripts
+{
+    <link rel="stylesheet" href="~/Content/DataTables/datatables.min.css" />
+    <script src="~/Content/DataTables/datatables.min.js"></script>
+}
+
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/_SailboatLayoutPage.cshtml";
@@ -7,4 +15,34 @@
 <h2>Sailboat Tracker</h2>
 <br />
 @Html.ActionLink("Add Sailboat", "Add")
+<br />
+
+<table id="tblSailboats" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Length at Waterline</th>
+            <th>Max Hull Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Type</td>
+                <td>@item.WaterLineLengthInFeet</td>
+                <td>@item.MaxHullSpeed</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("#tblSailboats").DataTable();
+    });
+</script>
 
