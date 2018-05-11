@@ -14,7 +14,6 @@ namespace ApplicationTemplate.Infrastructure.Mappings
         public SailboatProfile()
         {
             CreateMap<SailboatModel, SailboatDto>();
-            //CreateMap<SailboatDto, DataTier.EF.Models.Sailboat>();
         }
     }
 }
