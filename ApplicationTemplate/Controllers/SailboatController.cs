@@ -48,7 +48,7 @@ namespace ApplicationTemplate.Controllers
 
             //_repository.Save(dbObject);
 
-            //_repository.Save(sailboatDto)
+            _repository.Save(sailboatDto);
 
             return RedirectToAction("Index");
         }

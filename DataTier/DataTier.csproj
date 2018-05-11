@@ -48,9 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dapper.Models\Sailboat.cs" />
-    <Compile Include="EF.Models\ISailboat.cs" />
     <Compile Include="EF.Models\Sailboat.cs" />
     <Compile Include="EF.Models\SailboatTrips.cs" />
+    <Compile Include="Migrations\201805111301133_InitialCreate.cs" />
+    <Compile Include="Migrations\201805111301133_InitialCreate.Designer.cs">
+      <DependentUpon>201805111301133_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805111532455_MakeValuesNullable.cs" />
+    <Compile Include="Migrations\201805111532455_MakeValuesNullable.Designer.cs">
+      <DependentUpon>201805111532455_MakeValuesNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EFSailboatRepository.cs" />
     <Compile Include="Repositories\ISailboatDbRepository.cs" />
@@ -60,6 +68,19 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2bc938f4-e0c0-42ff-9032-a4e931dedbea}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805111301133_InitialCreate.resx">
+      <DependentUpon>201805111301133_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805111532455_MakeValuesNullable.resx">
+      <DependentUpon>201805111532455_MakeValuesNullable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

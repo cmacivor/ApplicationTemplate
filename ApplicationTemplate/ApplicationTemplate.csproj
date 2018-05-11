@@ -630,6 +630,10 @@
       <Project>{f7fb4757-44eb-42fa-85f3-c7a7db430e68}</Project>
       <Name>BusinessTier</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2bc938f4-e0c0-42ff-9032-a4e931dedbea}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataTier\DataTier.csproj">
       <Project>{527c6c57-3a42-4766-81c5-7279173cc5d4}</Project>
       <Name>DataTier</Name>

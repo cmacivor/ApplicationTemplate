@@ -15,7 +15,7 @@ namespace DataTier.Repositories
             throw new NotImplementedException();
         }
 
-        public void Save(ISailboat sailboatDto)
+        public void Save(Common.ISailboat sailboatDto)
         {
             using (var context = new SailboatDbContext())
             {
@@ -27,10 +27,9 @@ namespace DataTier.Repositories
                         {
                             Name = sailboatDto.Name,
                             Type = sailboatDto.Type,
-                            MaxHullSpeed = sailboatDto.MaxHullSpeed,
-                            WaterLineLengthInFeet = sailboatDto.WaterLineLengthInFeet
+                            MaxHullSpeed = sailboatDto.MaxHullSpeed.Value,
+                            WaterLineLengthInFeet = sailboatDto.WaterLineLengthInFeet.Value
                         };
-
 
                         context.Sailboats.Add(sailboat);
 

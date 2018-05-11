@@ -9,7 +9,7 @@ namespace DataTier.Repositories
 {
     public interface ISailboatDbRepository
     {
-        void Save(ISailboat sailboat);
+        void Save(Common.ISailboat sailboat);
 
         List<Sailboat> GetSailboats();
     }

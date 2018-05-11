@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessTier", "BusinessTie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTier", "DataTier\DataTier.csproj", "{527C6C57-3A42-4766-81C5-7279173CC5D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{2BC938F4-E0C0-42FF-9032-A4E931DEDBEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{527C6C57-3A42-4766-81C5-7279173CC5D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{527C6C57-3A42-4766-81C5-7279173CC5D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{527C6C57-3A42-4766-81C5-7279173CC5D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC938F4-E0C0-42FF-9032-A4E931DEDBEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC938F4-E0C0-42FF-9032-A4E931DEDBEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC938F4-E0C0-42FF-9032-A4E931DEDBEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC938F4-E0C0-42FF-9032-A4E931DEDBEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
