@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationTemplate", "Appl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationTemplate.Tests", "ApplicationTemplate.Tests\ApplicationTemplate.Tests.csproj", "{B9002212-4C3C-43EB-8510-BB260B3F5EAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessTier", "BusinessTier\BusinessTier.csproj", "{F7FB4757-44EB-42FA-85F3-C7A7DB430E68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTier", "DataTier\DataTier.csproj", "{527C6C57-3A42-4766-81C5-7279173CC5D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B9002212-4C3C-43EB-8510-BB260B3F5EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9002212-4C3C-43EB-8510-BB260B3F5EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9002212-4C3C-43EB-8510-BB260B3F5EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7FB4757-44EB-42FA-85F3-C7A7DB430E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FB4757-44EB-42FA-85F3-C7A7DB430E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FB4757-44EB-42FA-85F3-C7A7DB430E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FB4757-44EB-42FA-85F3-C7A7DB430E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{527C6C57-3A42-4766-81C5-7279173CC5D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{527C6C57-3A42-4766-81C5-7279173CC5D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{527C6C57-3A42-4766-81C5-7279173CC5D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{527C6C57-3A42-4766-81C5-7279173CC5D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
