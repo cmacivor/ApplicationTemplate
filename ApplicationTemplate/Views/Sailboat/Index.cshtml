@@ -52,7 +52,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Modal body text goes here.</p>
+                <div id="editView"></div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Save changes</button>
@@ -84,14 +84,35 @@
             else {
                 table.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
+               
             }
         });
 
         $('.modal').on('shown.bs.modal', function (event) {
-           
             var sailboatId = $("#sailboatId").data("id");
             console.log(sailboatId);
+            
 
+            fetch('/Sailboat/GetSailboatById', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({ id: sailboatId })
+            }).then(function (response) {
+
+                //$("#editView").html(response);
+                //console.log(response.json() );
+                if (response.ok) {
+                    response.json().then(function (data) {
+                        console.log(data);
+                    });
+                }
+
+            }).catch(function (error) {
+                console.log('error' + error);
+            });
         });
     });
 </script>

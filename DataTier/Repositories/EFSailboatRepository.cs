@@ -20,6 +20,21 @@ namespace DataTier.Repositories
             }
         }
 
+        public Sailboat GetSailboatById(int id)
+        {
+            using (var context = new SailboatDbContext())
+            {
+                var sailboat = context.Sailboats.FirstOrDefault(x => x.SailboatId == id);
+
+                if (sailboat == null)
+                {
+                    return null;
+                }
+
+                return sailboat;
+            }
+        }
+
         public void Save(Common.ISailboat sailboatDto)
         {
             using (var context = new SailboatDbContext())

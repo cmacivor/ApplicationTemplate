@@ -646,6 +646,7 @@
     <Content Include="Views\_SailboatLayoutPage.cshtml" />
     <Content Include="Views\Sailboat\Add.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Sailboat\_EditSailboatView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

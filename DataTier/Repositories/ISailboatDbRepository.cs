@@ -12,5 +12,7 @@ namespace DataTier.Repositories
         void Save(Common.ISailboat sailboat);
 
         List<Sailboat> GetSailboats();
+
+        Sailboat GetSailboatById(int id);
     }
 }

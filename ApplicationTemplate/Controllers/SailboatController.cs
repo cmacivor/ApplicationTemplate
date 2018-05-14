@@ -59,5 +59,28 @@ namespace ApplicationTemplate.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public JsonResult GetSailboatById(int id)
+        {
+            var sailboat = _repository.GetSailboatById(id);
+
+            if (sailboat == null)
+            {
+                //return View()
+            }
+
+            var sailboatVM = new SailboatModel
+            {
+                Name = sailboat.Name,
+                Type = sailboat.Type,
+                WaterLineLengthInFeet = sailboat.WaterLineLengthInFeet,
+                MaxHullSpeed = sailboat.MaxHullSpeed,
+                SailboatId = sailboat.SailboatId
+            };
+
+            //return PartialView("_EditSailboatView", sailboatVM);
+            return Json(sailboatVM);
+        }
     }
 }
