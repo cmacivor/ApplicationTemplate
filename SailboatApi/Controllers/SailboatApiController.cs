@@ -19,7 +19,7 @@ namespace SailboatApi.Controllers
         }
 
         // GET api/<controller>
-        public List<Sailboat> Get()
+        public IHttpActionResult Get()
         {
             var sailboats = _repository.GetSailboats();
 
@@ -38,7 +38,8 @@ namespace SailboatApi.Controllers
                 sailboatViewModels.Add(model);
             }
 
-            return sailboatViewModels;
+            //return sailboatViewModels;
+            return Ok(new { results = sailboatViewModels });
         }
 
         // GET api/<controller>/5

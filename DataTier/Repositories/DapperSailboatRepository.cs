@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +19,32 @@ namespace DataTier.Repositories
             throw new NotImplementedException();
         }
 
-        public  List<EF.Models.Sailboat> GetSailboats()
-        {
-            return null;
-        }
+        //public  List<EF.Models.Sailboat> GetSailboats()
+        //{
+        //    try
+        //    {
+        //        string sql = @"select 
+        //                        SailboatId
+        //                        ,Name
+        //                        ,Type
+        //                        ,WaterLineLengthInFeet
+        //                        ,MaxHullSpeed
+        //                        from
+        //                        Sailboats";
+
+        //        using (IDbConnection db = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SandboxDBContext;Integrated Security=True"))
+        //        {
+        //            var sailboats = db.Query<EF.Models.Sailboat>(sql).ToList();
+
+        //            return sailboats;
+        //        }
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        throw;
+        //        //TODO: implement some kind of logging
+        //    }
+        //}
 
         public void Save(ISailboat sailboat)
         {
@@ -29,7 +53,29 @@ namespace DataTier.Repositories
 
         List<EF.Models.Sailboat> ISailboatDbRepository.GetSailboats()
         {
-            throw new NotImplementedException();
+            try
+            {
+                string sql = @"select 
+                                SailboatId
+                                ,Name
+                                ,Type
+                                ,WaterLineLengthInFeet
+                                ,MaxHullSpeed
+                                from
+                                Sailboats";
+
+                using (IDbConnection db = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SandboxDBContext;Integrated Security=True"))
+                {
+                    var sailboats = db.Query<EF.Models.Sailboat>(sql).ToList();
+
+                    return sailboats;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+                //TODO: implement some kind of logging
+            }
         }
     }
 }
