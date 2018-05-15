@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTier", "DataTier\DataTi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{2BC938F4-E0C0-42FF-9032-A4E931DEDBEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SailboatApi", "SailboatApi\SailboatApi.csproj", "{323C4BF2-718C-47FA-87DC-268BDC26B7F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2BC938F4-E0C0-42FF-9032-A4E931DEDBEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BC938F4-E0C0-42FF-9032-A4E931DEDBEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BC938F4-E0C0-42FF-9032-A4E931DEDBEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{323C4BF2-718C-47FA-87DC-268BDC26B7F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323C4BF2-718C-47FA-87DC-268BDC26B7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323C4BF2-718C-47FA-87DC-268BDC26B7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323C4BF2-718C-47FA-87DC-268BDC26B7F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
