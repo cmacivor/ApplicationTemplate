@@ -60,14 +60,19 @@ namespace ApplicationTemplate.Controllers
             return RedirectToAction("Index");
         }
 
+        public PartialViewResult GetSailboatEditForm()
+        {
+            return PartialView("_EditSailboatView");
+        }
+
         [HttpPost]
-        public JsonResult GetSailboatById(int id)
+        public ActionResult GetSailboatById(int id)
         {
             var sailboat = _repository.GetSailboatById(id);
 
             if (sailboat == null)
             {
-                //return View()
+                return new HttpNotFoundResult();
             }
 
             var sailboatVM = new SailboatModel
@@ -79,7 +84,6 @@ namespace ApplicationTemplate.Controllers
                 SailboatId = sailboat.SailboatId
             };
 
-            //return PartialView("_EditSailboatView", sailboatVM);
             return Json(sailboatVM);
         }
     }

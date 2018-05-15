@@ -52,7 +52,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div id="editView"></div>
+                @{ Html.RenderPartial("_EditSailboatView", new SailboatModel()); }
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Save changes</button>
@@ -90,9 +90,7 @@
 
         $('.modal').on('shown.bs.modal', function (event) {
             var sailboatId = $("#sailboatId").data("id");
-            console.log(sailboatId);
             
-
             fetch('/Sailboat/GetSailboatById', {
                 method: 'POST',
                 headers: {
@@ -102,11 +100,13 @@
                 body: JSON.stringify({ id: sailboatId })
             }).then(function (response) {
 
-                //$("#editView").html(response);
-                //console.log(response.json() );
                 if (response.ok) {
                     response.json().then(function (data) {
                         console.log(data);
+                        $("#Name").val(data.Name);
+                        $("#Type").val(data.Type);
+                        $("#WaterLineLengthInFeet").val(data.WaterLineLengthInFeet);
+                        $("#MaxHullSpeed").val(data.MaxHullSpeed);
                     });
                 }
 
